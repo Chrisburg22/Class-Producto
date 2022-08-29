@@ -48,15 +48,21 @@ int main()
 
         case 4:
         {
+            string codigoBuscado;
             cout << "ELIMINAR" << endl;
-
+            cout << "Introduce el codigo del producto a eliminar" <<endl;
+            getline(cin, codigoBuscado);
+            producto.Eliminar(codigoBuscado);
             break;
         }
 
         case 5:
         {
+            string codigoBuscado;
             cout << "MODIFICAR" << endl;
-
+            cout << "Introduce el codigo del producto a modificar" <<endl;
+            getline(cin, codigoBuscado);
+            producto.Modificar(codigoBuscado);
             break;
         }
 
