@@ -2,11 +2,13 @@
 #include <fstream>
 #include "Classes/ProductoClass/Producto.hpp"
 #include "Classes/ProductoClass/Producto.cpp"
+#include "Classes/ProductoClass/Cliente.hpp"
+#include "Classes/ProductoClass/Cliente.cpp"
+
 using namespace std;
 
-int main()
-{
-    int opc;
+void menuProductos(){
+     int opc;
     Producto producto;
     do
     {
@@ -72,6 +74,48 @@ int main()
         }
 
     } while (opc != 0);
+}
+void menuClientes(){
+     int opc;
+     Cliente cliente;
+    do{
+        cout << "CLIENTES" << endl;
+        cout << "1)Crear" << endl;
+        cout << "2)Mostrar" << endl;
+        cout << "3)Buscar" << endl;
+        cout << "4)Eliminar" << endl;
+        cout << "5)Modificar" << endl;
+        cin >> opc;
+        switch(opc){
+            case 1:{
+                cout << "CREAR" << endl;
+                cliente.Crear();
+            }
+            default:
+            cout << "Error: Opcion no valida, intentalo de nuevo" << endl;
+            break;
+        }
+    }while(opc != 0);
+}
+int main()
+{
+    int opc;
+    do{
+        cout << "AUTOMAXX" << endl;
+        cout << "1)CLiente" << endl;
+        cout << "2)Producto" <<endl;
+        cin >> opc;
+        switch(opc){
+            case 1:{
+                menuClientes();
+                break;
+            }
+            case 2: {
+                menuProductos();
+                break;
+            }
+        }
+    }while(opc != 0);
 
     return 0;
 }
