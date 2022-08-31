@@ -107,6 +107,7 @@ int main()
         cout << "1)CLiente" << endl;
         cout << "2)Producto" <<endl;
         cin >> opc;
+        
         switch(opc){
             case 1:{
                 menuClientes();
