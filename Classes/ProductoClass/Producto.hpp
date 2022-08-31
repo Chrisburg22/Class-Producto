@@ -16,8 +16,8 @@ public:
     void Crear();
     void Mostrar();
     void Buscar(string codigo);
-    void Eliminar(string codigo);
-    void Modificar(string codigo);
+    void Eliminar();
+    void Modificar();
 
     //GETTERS
     string getCodigo();

@@ -2,13 +2,11 @@
 #include <fstream>
 #include "Classes/ProductoClass/Producto.hpp"
 #include "Classes/ProductoClass/Producto.cpp"
-#include "Classes/ProductoClass/Cliente.hpp"
-#include "Classes/ProductoClass/Cliente.cpp"
-
 using namespace std;
 
-void menuProductos(){
-     int opc;
+int main()
+{
+    int opc;
     Producto producto;
     do
     {
@@ -50,21 +48,15 @@ void menuProductos(){
 
         case 4:
         {
-            string codigoBuscado;
             cout << "ELIMINAR" << endl;
-            cout << "Introduce el codigo del producto a eliminar" <<endl;
-            getline(cin, codigoBuscado);
-            producto.Eliminar(codigoBuscado);
+
             break;
         }
 
         case 5:
         {
-            string codigoBuscado;
             cout << "MODIFICAR" << endl;
-            cout << "Introduce el codigo del producto a modificar" <<endl;
-            getline(cin, codigoBuscado);
-            producto.Modificar(codigoBuscado);
+
             break;
         }
 
@@ -74,6 +66,10 @@ void menuProductos(){
         }
 
     } while (opc != 0);
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 }
 void menuClientes(){
      int opc;
@@ -90,6 +86,12 @@ void menuClientes(){
             case 1:{
                 cout << "CREAR" << endl;
                 cliente.Crear();
+                break;
+            }
+            case 2:{
+                cout << "MOSTRAR" << endl;
+                cliente.Mostrar();
+                break;
             }
             default:
             cout << "Error: Opcion no valida, intentalo de nuevo" << endl;
@@ -116,6 +118,14 @@ int main()
             }
         }
     }while(opc != 0);
+=======
+>>>>>>> parent of 437359e (Agregando el menu de clientes, creacion de la clase clientes, metodo crear terminado)
+=======
+>>>>>>> parent of 437359e (Agregando el menu de clientes, creacion de la clase clientes, metodo crear terminado)
+=======
+>>>>>>> parent of 437359e (Agregando el menu de clientes, creacion de la clase clientes, metodo crear terminado)
+=======
+>>>>>>> parent of 437359e (Agregando el menu de clientes, creacion de la clase clientes, metodo crear terminado)
 
     return 0;
 }

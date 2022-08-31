@@ -1,6 +1,5 @@
 {
     "tasks": [
-       
         {
             "type": "cppbuild",
             "label": "C/C++: g++.exe compilar archivo activo",
@@ -8,7 +7,7 @@
             "args": [
                 "-fdiagnostics-color=always",
                 "-g",
-                "${file}",
+                "*.cpp",
                 "-o",
                 "${fileDirname}\\${fileBasenameNoExtension}.exe"
             ],
@@ -22,7 +21,7 @@
                 "kind": "build",
                 "isDefault": true
             },
-            "detail": "compilador: C:\\msys64\\mingw64\\bin\\g++.exe"
+            "detail": "Tarea generada por el depurador."
         }
     ],
     "version": "2.0.0"

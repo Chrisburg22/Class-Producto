@@ -1,6 +1,7 @@
 #include <iostream>
 #include <fstream>
 #include <iomanip>
+
 #include "Cliente.hpp"
 
 using namespace std;
@@ -53,5 +54,44 @@ void Cliente::Crear(){
     archivoCliente << RFC << "," << nombre << "," << apellido << "," << correo << "," << numeroCelular << "," << precioVenta << endl;
     archivoCliente.close();
 };
+
+void Cliente::Mostrar()
+{
+    string RFC, nombre, apellido, correo, numeroCelular, precioVenta;
+    ifstream archivo("clientes.txt");
+
+    if(archivo.fail()){
+        cout << "No se pudo abrir el archivo" << endl;
+        return;
+    }
+
+    while(true){
+        getline( archivo, RFC, ',' );
+        if(archivo.eof())
+           break;
+        getline( archivo, nombre,',' );
+        getline( archivo, apellido,',' );
+        getline( archivo, correo,',' );
+        getline( archivo, numeroCelular,',' );
+        getline( archivo, precioVenta,',' );
+        Cliente cliente(RFC, nombre, apellido, correo, numeroCelular, precioVenta);
+        cout << left << endl;
+        cout << setw(15) << "RFC";
+        cout << setw(20) << "Nombre";
+        cout << setw(20) << "Apellido";
+        cout << setw(20) << "Correo";
+        cout << setw(20) << "Numero Celular";
+        cout << setw(20) << "Precio Venta" << endl;
+        cout << setw(15) << RFC;
+        cout << setw(20) << nombre;
+        cout << setw(20) << apellido;
+        cout << setw(20) << correo;
+        cout << setw(20) << numeroCelular;
+        cout << setw(20) << precioVenta << endl;
+        cout << "------------------------------" << endl;
+    }
+
+    archivo.close();
+}
 
 

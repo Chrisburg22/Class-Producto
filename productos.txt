@@ -1,3 +1,13 @@
+<<<<<<< HEAD
+100,202,100,200,dados
+300,5004,900,10000,palo
+=======
 20201,392002,90,1000,iphone
 9000,209292,1000,2000,teddy
-1232212321,Codigo de probedor,25,30,Mi descipcion sera algo brebe
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 437359e (Agregando el menu de clientes, creacion de la clase clientes, metodo crear terminado)
+=======
+>>>>>>> parent of 437359e (Agregando el menu de clientes, creacion de la clase clientes, metodo crear terminado)
+=======
+>>>>>>> parent of 437359e (Agregando el menu de clientes, creacion de la clase clientes, metodo crear terminado)
