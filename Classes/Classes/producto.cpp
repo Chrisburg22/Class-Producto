@@ -2,6 +2,7 @@
 #include <fstream>
 #include <iomanip>
 #include "Producto.hpp"
+
 using namespace std;
 
 Producto::Producto()
@@ -32,6 +33,7 @@ void Producto::Crear()
     }
 
     string codigo, codigoProvedor, precioVenta, precioCompra, descripcion;
+
     cout << "Bienvenido a crear producto" << endl;
     cout << "Ingrese el codigo de 10 digitos para el producto" << endl;
     getline(cin, codigo);
@@ -55,6 +57,7 @@ void Producto::Crear()
 void Producto::Mostrar()
 {
     string codigo, codigoProvedor, precioVenta, precioCompra, descripcion;
+    
     ifstream archivo("productos.txt");
 
     if (archivo.fail())
